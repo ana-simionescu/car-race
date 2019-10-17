@@ -1,0 +1,46 @@
+Nume, prenume: Simionescu Ana-Maria
+Grupa, seria: 313CA
+
+Data începerii temei: 29-03-2019
+Data finalizării temei: 01-04-2019
+
+Problemele întâmpinate:
+	- La inceput intampinat probleme la intelegerea conceptului de SkipList si
+de ce ar fi acesta util in anumite contexte, nefiind abordat la cursuri sau
+laboratoare
+	- Dupa implementarea SkipListului mi-a fost greu sa determin o modalitate
+de folosire a sa in problema data si a trebuit sa imi schimb abordarea asupra
+rezolvarii de mai multe ori pe parcursul temei.
+
+
+Algoritmul utilizat:
+
+	In abordarea mea, folosesc SkipList-ul pentru a retine punctajele
+concurentilor, impreuna cu id-urile. Skiplistul este ordonat dupa id (key), si
+retine in campul value punctajul fiecarui concurent.
+
+	Pentru retinerea timpului fiecarui concurent si realizarea clasamentului
+fiecarei curse folosesc un vector de tupluri, care va retine ca prim element
+id-ul concurentilor, al doilea element va fi reprezentat de timpul obtinut in
+cursa curenta, iar al treilea element, pozitia jucatorului in clasamentul 
+trecut.
+
+	Pentru obtinerea clasamentului si afisarea sa, folosesc un vector de tupluri
+care va retine ca prim element id-ul concurentilor, al doilea element va fi 
+reprezentat de punctajul curent, iar al treilea element, pozitia jucatorului in 
+clasamentul trecut.
+
+	Dupa printare, salvez noile pozitii in clasament in vectorul last_print_rank
+pentru a putea calcula diferenta de nivel la urmatorul print.
+
+	Dupa citirea timpilor unei curse, realizez clasamentul pe cursa si determin
+numarul de puncte aferente fiecarui jucator. Caut in SkipList nodul care retine
+punctajul jucatorului si actualizez numarul sau de puncte. Parcurg SkipListul
+pentru a prelua noile punctaje. Sortez noul clasament salvat in rank si retin 
+noile pozitii ale jucatorilor in oldrank.
+
+Complexitatea temei: 
+	Problema in sine nu mi se pare complicata, insa in continuare consider ca 
+putea fi rezolvata in moduri mult mai eficiente si intuitive fara utilizarea 
+SkipList. In concluzie tema a fost mai greu de implementat decat ma asteptam 
+la inceput.
